@@ -20,6 +20,8 @@ def compile_code(source_folder):
     # Run Maven compile
     result = subprocess.run(["mvn", "clean", "package"], capture_output=True, text=True)
 
+    print(result)
+
     if result.returncode != 0:
         print("Maven compilation failed:")
         print(result.stderr)
