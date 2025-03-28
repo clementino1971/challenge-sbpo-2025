@@ -5,7 +5,11 @@ for i in $(seq -f "%04g" 1 20); do
     # Monta o nome dos arquivos
     input_file="datasets/a/instance_${i}.txt"
     output_file="output/instance_${i}.txt"
-    
+	
+	echo ""
+	echo ""
+    echo "##### $input_file #####"
+	    
     # Executa o comando com os arquivos gerados
     python3 checker.py "$input_file" "$output_file"
 done

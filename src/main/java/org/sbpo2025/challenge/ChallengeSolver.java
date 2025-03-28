@@ -54,6 +54,8 @@ public class ChallengeSolver {
         int cnt = 0;
         while(itensAttended_<= waveSizeUB){
 
+            if(getRemainingTime(stopWatch) <= 30) break;
+
             if(cnt == 0) System.out.println("\n\nItens coletados: "+ itensAttended_ + " de " + waveSizeUB);
 
             Map.Entry<Integer, Integer> choice = choiceAisleOrder();
